@@ -12,7 +12,7 @@ bot.login(process.env.Token);
 
 bot.on('message', message => {
         if (message.content === prefix + "Help"){
-            message.channel.sendMessage("Liste des commandes: \n **~Test** : Tester le bot \n **~AEmbed** : Créer des Embed \n **Hugs** : Faites un câlin ! \n **~Avatar** : Afficher votre avatar \n **~Infodiscord : Infos à propos d'AEna");
+            message.channel.sendMessage("Liste des commandes: \n **~Test** : Tester le bot \n **~AEmbed** : Créer des Embed \n **Hugs** : Faites un câlin ! \n **~Avatar** : Afficher votre avatar \n **~Infodiscord** : Infos à propos d'Aena \n ***Bonne visite sur Aena ! :D***");
         }
     
         if (message.content === "~Test"){
