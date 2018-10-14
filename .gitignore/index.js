@@ -42,8 +42,8 @@ bot.on('message', message => {
          message.channel.sendMessage("***Tiens un câlin !*** :D");
     }
     
-   if(messsage.content === "infodiscord") { 
-         var embed= new Discord.RichEmbed()
+   if(message.content === "infodiscord") { 
+         var embed = new Discord.RichEmbed()
          .setDescription("Information du Discord")
          .addField("Nom du discord", message.guild.name)
         .addField("Crée le", message.guild.createdAt)
