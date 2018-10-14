@@ -25,24 +25,7 @@ bot.on('message', message => {
         message.channel.sendMessage("Test \n Test2")
     }
 
-    let showHelp = function (msg, args) {
-        let embed = new Discord.RichEmbed()
-          .setTitle(`Liste des commandes`)
-          .setDescription(`${Object.keys(commands).length} commandes sont disponibles`)
-          .setColor("#0b8cf1")
-          .setTimestamp()
-          .setFooter(`Demandé par ${msg.author.username}`, msg.author.avatarURL);
-      
-        for (com in commands) {
-          if (commands[com]["show"]) {
-            embed.addField(commands[com]["name"], commands[com]["desc"] + "\n" + commands[com]["format"]);
-          }
-        }
-      
-        msg.channel.send({
-          embed
-        });
-      }   
+     
       if (message.content.split(" ")[0] == "*AEmbed"){//EMBED
         var embed = new Discord.RichEmbed()
         .setColor("#0b8cf1")
