@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-var prefix = ("*")
+var prefix = ("~")
 
 bot.on('ready', function() {
     bot.user.setGame("Command: Help");
@@ -12,7 +12,7 @@ bot.login(process.env.TOKEN);
 
 
 bot.on('message', message => {
-    if (message.content === prefix + "HelpCommande"){
+    if (message.content === prefix + "Help"){
         message.channel.sendMessage("Liste des commandes: \n ~test : Tester le bot \n ~AEmbed : Créer des Embed \~Avatar : Afficher votre avatar");
     }
 
