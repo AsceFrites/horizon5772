@@ -13,7 +13,7 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
     if (message.content === prefix + "~Help"){
-        message.channel.sendMessage("Liste des commandes: \n ~Test : Tester le bot \n ~AEmbed : Créer des embed \~Avatar : Afficher votre avatar");
+        message.channel.sendMessage("Liste des commandes: \n ~Test : Tester le bot \n ~AEmbed : Créer des Embed \~Avatar : Afficher votre avatar");
     }
 
     if (message.content === "~Test"){
