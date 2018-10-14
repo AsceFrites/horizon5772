@@ -54,7 +54,7 @@ bot.on(
            
          }
         
-      if (message.content == "~Sondage") {
+      if (message.content == "Sondage") {
         let args = message.content.split(" ").slice(1);
         let thingToEcho = args.join(" ")
         var embed = new Discord.RichEmbed()
