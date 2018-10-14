@@ -10,11 +10,6 @@ bot.on('ready', function() {
 
 bot.login(process.env.TOKEN);
 
-bot.on('guildMemberAdd', function (member) {
-    member.createDM().then(function (channel) {
-        return channel.send('Bienvenue sur le channel ! ' + member.displayName)
- 
-    }
 
 bot.on('message', message => {
     if (message.content === prefix + "help"){
