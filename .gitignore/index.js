@@ -40,6 +40,6 @@ bot.on('message', message => {
       
     if (message.content == "Hug") { 
          message.channel.sendMessage("***Câlins*** :D");
-        
+    }
 
 });
