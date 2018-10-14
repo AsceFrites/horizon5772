@@ -54,21 +54,16 @@ bot.on(
            
          }
         
-      if (message.content == "Sondage") {
-        let args = message.content.split(" ").slice(1);
-        let thingToEcho = args.join(" ")
-        var embed = new Discord.RichEmbed()
-         .setDescription("Sondage")
-         .addField(thingToEcho, "Répondre avec :heavy_check_mark: ou :heavy_multiplication_x:")
-         .setColor("#0b8cf1")
-         .setTimestamp()
-      message.channels.sendEmbed(embed)
-      .then(function (message) {
+      if (message.content.split(" ")[0] == "~Sondage"){//EMBED
+            var embed = new Discord.RichEmbed()
+            .setColor("#0b8cf1")
+            .setTitle(message.content.slice("*AEmbed ".length))
+            console.log("Commande test")
+            message.channel.send({embed})
           message.react(":heavy_check_mark:")
           message.react(":heavy_multiplication_x:")
-    })
-        .catch(function(err) {console.error(err)});
     
-    };
+    
+}
     
     });
