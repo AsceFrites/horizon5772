@@ -7,7 +7,7 @@ bot.on('ready', function() {
     bot.user.setGame("Commandes: ~Help");
     console.log("Connectedç");
 });
-bot.login(process.env.TOKEN);
+bot.login(process.env.Token);
 
 bot.on(
     'message', message => {
@@ -53,16 +53,5 @@ bot.on(
            
          }
         
-      if (message.content.split(" ")[0] == "~Sondage"){//EMBED
-            var embed = new Discord.RichEmbed()
-            .setColor("#0b8cf1")
-            .setTitle(message.content.slice("*AEmbed ".length))
-            console.log("Commande test")
-            message.channel.send({embed})
-          message.react(":heavy_check_mark:")
-          message.react(":heavy_multiplication_x:")
-    
-    
-}
     
     });
