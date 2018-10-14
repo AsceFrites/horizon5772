@@ -10,8 +10,7 @@ bot.on('ready', function() {
 
 bot.login(process.env.Token);
 
-bot.on(
-    'message', message => {
+bot.on('message', message => {
         if (message.content === prefix + "Help"){
             message.channel.sendMessage("Liste des commandes: \n **~test** : Tester le bot \n **~AEmbed** : Créer des Embed \n **~Avatar** : Afficher votre avatar");
         }
