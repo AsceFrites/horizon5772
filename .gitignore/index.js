@@ -34,12 +34,8 @@ bot.on('message', message => {
         message.channel.send({embed})
       }
 
-      if (message.content === 'AVATAR') {
-        let embed = new Discord.RichEmbed()
-        .setColor(user.displayHexColor)
-        .setImage(message.author.user.avatarURL);
-         
-        message.channel.send({embed})
+       if (message.content === 'AVATAR') {
+        message.reply(message.author.avatarURL);
       }
       
 
