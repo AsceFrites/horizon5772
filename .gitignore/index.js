@@ -4,11 +4,11 @@ const bot = new Discord.Client();
 var prefix = ("*")
 
 bot.on('ready', function() {
-    bot.user.setGame("Command: ANGEL T PD");
+    bot.user.setGame("Command: ANGEL");
     console.log("Connectedç");
 });
 
-bot.login("NTAwNzg2MTA1MDYzNTcxNDY2.DqP5Vw.HNZ3_MHRzJ4-MQYlvu07cCRIrZo");
+bot.login(process.env.TOKEN);
 
 
 bot.on('message', message => {
@@ -17,7 +17,7 @@ bot.on('message', message => {
     }
 
     if (message.content === "Angel"){
-        message.reply("Test 1 :)");
+        message.reply("Angel test :)");
         console.log("Commande Salut effectué")
         message.reply;
     }
@@ -25,29 +25,23 @@ bot.on('message', message => {
         message.channel.sendMessage("Test \n Test2")
     }
 
-    let showHelp = function (msg, args) {
-        let embed = new Discord.RichEmbed()
-          .setTitle(`Liste des commandes`)
-          .setDescription(`${Object.keys(commands).length} commandes sont disponibles`)
-          .setColor("#0b8cf1")
-          .setTimestamp()
-          .setFooter(`Demandé par ${msg.author.username}`, msg.author.avatarURL);
-      
-        for (com in commands) {
-          if (commands[com]["show"]) {
-            embed.addField(commands[com]["name"], commands[com]["desc"] + "\n" + commands[com]["format"]);
-          }
-        }
-      
-        msg.channel.send({
-          embed
-        });
-      }   
+     
       if (message.content.split(" ")[0] == "*AEmbed"){//EMBED
         var embed = new Discord.RichEmbed()
         .setColor("#0b8cf1")
         .setTitle(message.content.slice("*AEmbed ".length))
         console.log("Commande test")
         message.channel.send({embed})
-      }  
+      }
+
+      if (message.content === 'AVATAR') {
+        let embed = new Discord.RichEmbed()
+        .setColor(user.displayHexColor)
+        .setImage(message.author.user.avatarURL);
+         
+        message.channel.send({embed})
+      }
+      
+
+      
 });
