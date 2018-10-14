@@ -7,6 +7,7 @@ bot.on('ready', function() {
     bot.user.setGame("Commandes: ~Help");
     console.log("Connectedç");
 });
+
 bot.login(process.env.Token);
 
 bot.on(
