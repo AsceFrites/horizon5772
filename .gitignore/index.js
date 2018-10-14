@@ -38,7 +38,5 @@ bot.on('message', message => {
         console.log("Commande test")
         message.channel.send({embed})
       }
- if (message.content === "AMOUR"){
-  .setImage
  
 });
