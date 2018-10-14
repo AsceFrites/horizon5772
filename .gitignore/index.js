@@ -62,13 +62,11 @@ bot.on('message', message => {
             .addField(thingToEcho, "Répondre avec ✔ ou ✖")
             .setColor("#0b8cf1")
             .setTimestamp()
-        message.guild.channels.find("name", "sondage").sendEmbed(embed)
+        message.guild.channels.find("name", "général").sendEmbed(embed)
             .then(function (message) {
                 message.react("✔")
                 message.react("✖")
-            }).catch(function() {
-
-            });
+            }).catch(function() 
 
 
 });
