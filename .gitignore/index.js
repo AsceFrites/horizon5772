@@ -42,7 +42,7 @@ bot.on('message', message => {
          message.channel.sendMessage("***Tiens un câlin !*** :D");
     }
     
- if(messsage.content === "infodiscord") { 
+    if(messsage.content === "infodiscord") { 
         var embed= new Discord.RichEmbed()
         .setDescription("Information du Discord")
         .addField("Nom du discord", message.guild.name)
@@ -50,7 +50,8 @@ bot.on('message', message => {
         .addField("Tu as rejoins le", message.member.joinedAt)
         .addField("Utilisateur sur le discord", message.guild.memberCount)
         .setColor("0x0000FF")
-        message.channel.sendEmbed(embed)
-        }
+       message.channel.sendEmbed(embed)
+       
+     }
 
 });
