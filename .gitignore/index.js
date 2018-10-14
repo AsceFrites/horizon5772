@@ -10,14 +10,6 @@ bot.on('ready', function() {
 
 bot.login(process.env.TOKEN);
 
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find(général => général.name === 'member-log');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Welcome to the server, ${member}`);
-
 
 bot.on('message', message => {
     if (message.content === prefix + "help"){
@@ -41,5 +33,13 @@ bot.on('message', message => {
         console.log("Commande test")
         message.channel.send({embed})
       }
+ 
+ client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find(général => général.name === 'member-log');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(`Welcome to the server, ${member}`);
  
 });
