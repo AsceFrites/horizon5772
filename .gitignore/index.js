@@ -64,8 +64,8 @@ bot.on(
          .setTimestamp()
       message.channels.sendEmbed(embed)
       .then(function (message) {
-          message.react("✔")
-          message.react("✖")
+          message.react(":heavy_check_mark:")
+          message.react(":heavy_multiplication_x:")
     })
         .catch(function(err) {console.error(err)});
     
