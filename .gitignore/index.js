@@ -12,16 +12,16 @@ bot.login(process.env.Token);
 
 bot.on('message', message => {
         if (message.content === prefix + "Help"){
-            message.channel.sendMessage("Liste des commandes: \n **~test** : Tester le bot \n **~AEmbed** : Créer des Embed \n **~Avatar** : Afficher votre avatar");
+            message.channel.sendMessage("Liste des commandes: \n **~Test** : Tester le bot \n **~AEmbed** : Créer des Embed \n **Hugs** : Faites un câlin ! \n **~Avatar** : Afficher votre avatar \n **~Infodiscord : Infos à propos d'AEna");
         }
     
-        if (message.content === "~test"){
+        if (message.content === "~Test"){
             message.reply("test :)");
             console.log("Commande Salut effectué")
             message.reply;
         }
         if (message.content === "Test"){
-            message.channel.sendMessage("Test \n Test2")
+            message.channel.sendMessage("Test \n Test2 effectué")
         }
     
          
@@ -33,7 +33,7 @@ bot.on('message', message => {
             message.channel.send({embed})
           }
     
-           if (message.content === '~avatar') {
+           if (message.content === '~Avatar') {
             message.reply(message.author.avatarURL);
           }
           
@@ -41,7 +41,7 @@ bot.on('message', message => {
              message.channel.sendMessage("***Tiens un câlin !*** :D");
         }
         
-       if(message.content === "infodiscord") { 
+       if(message.content === "~Infodiscord") { 
              var embed = new Discord.RichEmbed()
              .setDescription("Information du Discord")
              .addField("Nom du discord", message.guild.name)
