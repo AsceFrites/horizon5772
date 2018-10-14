@@ -38,7 +38,7 @@ bot.on('message', message => {
         message.reply(message.author.avatarURL);
       }
       
-    if (message.content == "Hug") { 
+    if (message.content == "Hugs", "HUGS", "HUG", "hug") { 
          message.channel.sendMessage("***Câlins*** :D");
     }
 
