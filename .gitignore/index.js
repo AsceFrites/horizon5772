@@ -17,7 +17,7 @@ bot.on('message', message => {
     }
 
     if (message.content === "Angel"){
-        message.reply("Test 1 :)");
+        message.reply("Angel t moche :)");
         console.log("Commande Salut effectué")
         message.reply;
     }
