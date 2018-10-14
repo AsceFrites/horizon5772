@@ -59,7 +59,7 @@ bot.on(
         let thingToEcho = args.join(" ")
         var embed = new Discord.RichEmbed()
          .setDescription("Sondage")
-         .addField(thingToEcho, "Répondre avec ✔ ou ✖")
+         .addField(thingToEcho, "Répondre avec :heavy_check_mark: ou :heavy_multiplication_x:")
          .setColor("#0b8cf1")
          .setTimestamp()
       message.channels.sendEmbed(embed)
