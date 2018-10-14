@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("~")
 
 bot.on('ready', function() {
-    bot.user.setGame("Command: Help");
+    bot.user.setGame("Commandes: ~Help");
     console.log("Connectedç");
 });
 
@@ -13,7 +13,7 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
     if (message.content === prefix + "Help"){
-        message.channel.sendMessage("Liste des commandes: \n ~test : Tester le bot \n ~AEmbed : Créer des Embed \~Avatar : Afficher votre avatar");
+        message.channel.sendMessage("Liste des commandes: \n **~test** : Tester le bot \n **~AEmbed** : Créer des Embed \n **~Avatar** : Afficher votre avatar");
     }
 
     if (message.content === "~test"){
