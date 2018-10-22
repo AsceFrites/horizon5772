@@ -56,7 +56,7 @@ bot.on('message', message => {
          if (message.content.startsWith('~play')) {
             // On récupère le premier channel audio du serveur
             let voiceChannel = message.guild.channels
-              .filter(function (channel) { return channel.type === 'voice' })
+              .filter(function (Musique 🎵) { return channel.type === 'voice' })
               .first()
             // On récupère les arguments de la commande 
             // il faudrait utiliser une expression régulière pour valider le lien youtube
