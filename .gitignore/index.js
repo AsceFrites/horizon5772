@@ -61,6 +61,7 @@ bot.on('message', message => {
         }
 
         if (command === 'clear') {
+          const deleteCount = parseInt(args [0], 10);
          if (!deleteCount || deleteCount < 2 || deleteCount > 100)
             return msg.reply("Merci d'indiquer un nombre de message à supprimer entre 2 et 100");
           async function clear() {
