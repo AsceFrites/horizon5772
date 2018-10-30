@@ -54,9 +54,8 @@ bot.on('message', message => {
          }
 
         
-         if (message.content.startsWith("~cadre")) {
-          sg.delete(1) 
-          const str = message.content.substring("~cadre".length)
+         if (message.content.startsWith("~say")) {
+          const str = message.content.substring("~say".length)
           message.channel.sendMessage(str)
         }
 
