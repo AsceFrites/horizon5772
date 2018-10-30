@@ -55,7 +55,7 @@ bot.on('message', message => {
 
         
          if (message.content.startsWith("~cadre")) {
-          const str = message.content.substring("~cadre".length)
+          const str = message.content.substring("~cadre", "``` \n", length, "\n ```" )
           message.channel.sendMessage(str)
         }
 
