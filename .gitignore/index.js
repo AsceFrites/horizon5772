@@ -54,8 +54,9 @@ bot.on('message', message => {
          }
 
         
-        if (message.content === "~cadre"){
-            message.channel.sendMessage(" \```css \n \n \```")
+         if (message.content.split(" ")[0] == "~cadre"){//cadre
+         message.reply(message.content.slice("~cadre".length))
+
         }
          
          
