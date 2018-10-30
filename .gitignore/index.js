@@ -60,7 +60,13 @@ bot.on('message', message => {
           message.channel.sendMessage(str)
         }
 
-        
-         
-         
+        if (command === 'clear') {
+         if (!deleteCount || deleteCount < 2 || deleteCount > 100)
+            return msg.reply("Merci d'indiquer un nombre de message à supprimer entre 2 et 100");
+          async function clear() {
+          const fetched = await msg.channel.fetchMessages({limit: deleteCount});
+           msg.channel.bulkDelete (fetched).catch(console.error);
+          }
+          clear();
+        }
     });
