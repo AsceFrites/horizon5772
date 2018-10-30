@@ -61,8 +61,13 @@ bot.on('message', message => {
         }
 
         if (command === 'clear') {
+          const modRole = msg.guild.roles.find("Protecteurs", "Modérateurs");
+          if (!msg.member.roles.has(modRole.id))
+            return msg.reply("Vous n'avez pas la permission d'utiliser cette commande.").catch (console.error)
+          msg.delete();
           const deleteCount = parseInt(args [0], 10);
-         if (!deleteCount || deleteCount < 2 || deleteCount > 100)
+      
+          if (!deleteCount || deleteCount < 2 || deleteCount > 100)
             return msg.reply("Merci d'indiquer un nombre de message à supprimer entre 2 et 100");
           async function clear() {
           const fetched = await msg.channel.fetchMessages({limit: deleteCount});
