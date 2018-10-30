@@ -23,12 +23,6 @@ bot.on('message', message => {
         if (message.content === "~test"){
             message.channel.sendMessage("Test \n Test2 effectué \n ```Bot OK```")
         }
-    
-     }
-        if (message.content === "~cadre"){
-            message.channel.sendMessage("|```css \n \n ```|")
-        }
-         
           
     
     if (message.content.split(" ")[0] == "~aembed"){//EMBED
@@ -59,6 +53,10 @@ bot.on('message', message => {
            
          }
 
+        
+        if (message.content === "~cadre"){
+            message.channel.sendMessage("|```css \n \n ```|")
+        }
          
-       
+         
     });
