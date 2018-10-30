@@ -54,10 +54,12 @@ bot.on('message', message => {
          }
 
         
-         if (message.content.split(" ")[0] == "~cadre"){//cadre
-         message.reply(message.content.slice("~cadre".length))
-
+         if (message.content.startsWith("~cadre")) {
+          const str = message.content.substring("~cadre".length)
+          message.channel.sendMessage(str)
         }
+
+        
          
          
     });
