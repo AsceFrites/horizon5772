@@ -24,8 +24,14 @@ bot.on('message', message => {
             message.channel.sendMessage("Test \n Test2 effectué \n ```Bot OK```")
         }
     
+     }
+        if (message.content === "~cadre"){
+            message.channel.sendMessage("|```css \n \n ```|")
+        }
          
-          if (message.content.split(" ")[0] == "~aembed"){//EMBED
+          
+    
+    if (message.content.split(" ")[0] == "~aembed"){//EMBED
             var embed = new Discord.RichEmbed()
             .setColor("#febfd2")
             .setTitle(message.content.slice("~aembed ".length))
