@@ -55,7 +55,8 @@ bot.on('message', message => {
 
         
          if (message.content.startsWith("~cadre")) {
-          const str = message.content.substring("~cadre", "``` \n", length, "\n ```" )
+          const str = message.content.substring("~cadre".length)
+          sg.delete(1)
           message.channel.sendMessage(str)
         }
 
