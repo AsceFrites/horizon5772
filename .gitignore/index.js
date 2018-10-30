@@ -55,6 +55,7 @@ bot.on('message', message => {
 
         
          if (message.content.startsWith("~say")) {
+          message.delete()
           const str = message.content.substring("~say".length)
           message.channel.sendMessage(str)
         }
