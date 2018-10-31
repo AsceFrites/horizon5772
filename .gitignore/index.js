@@ -174,12 +174,12 @@ bot.on('message', message => {
       if (message.content === "~roll"){
         random()
         
-      var embed = new Discord.RichEmbed()
+           var embed = new Discord.RichEmbed()
           .addField("Tu as tiré le : ", randroll)
           .setColor("#8800fc")
-          message.channel.sendEmbed(embed)
-        
-      }
+       message.channel.sendEmbed(embed)
+           console.log(randroll);
+        }
        
     }
       
