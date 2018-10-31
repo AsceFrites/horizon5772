@@ -26,8 +26,8 @@ bot.on('message', message => {
           
     
     if (message.content.split(" ")[0] == "~aembed"){//EMBED
-            var embed = new Discord.RichEmbed()
-            message.delete()
+             message.delete()
+             var embed = new Discord.RichEmbed()
             .setColor("#febfd2")
             .setTitle(message.content.slice("~aembed ".length))
             console.log("Emmbed")
@@ -64,20 +64,20 @@ bot.on('message', message => {
         if(message.content === "~help2") { 
           var embed = new Discord.RichEmbed()
           .setDescription("***Liste des commandes :***")
-          .addField("**~test : ** Tester le bot.")
-         .addField("**~aemebed : ** Créer des Embed.")
-         .addField("**Hugs :** Faites des câlins !")
-         .addField("**~avatar :** Afficher votre avatar.")
-         .addField("**~infodiscord :** Infos à propos d'Aena.")
-         .addField("**~say :** Faire dire ce que vous souhaitez au bot !.")
-         .addField(" \n ***Bonne visiste sur Aena !")
+          .addField("**~test : **", "Tester le bot.")
+         .addField("**~aemebed : **", "Créer des Embed.")
+         .addField("**Hugs :**", "Faites des câlins !")
+         .addField("**~avatar :**", "Afficher votre avatar.")
+         .addField("**~infodiscord :**", "Infos à propos d'Aena.")
+         .addField("**~say :**", "Faire dire ce que vous souhaitez au bot !.")
+         .addField(" \n ***Bonne visiste sur Aena !***")
          .setColor("#1EE9CE")
       message.channel.sendEmbed(embed)
         }
 
         if (message.content.split(" ")[0] == "~sondage"){//EMBED
-          var embed = new Discord.RichEmbed()
           message.delete()
+          var embed = new Discord.RichEmbed()
           .setColor("#febfd2")
           .setTitle(message.content.slice("~sondage ".length))
           console.log("sondage")
