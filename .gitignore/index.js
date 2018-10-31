@@ -118,12 +118,20 @@ bot.on('message', message => {
       if (message.content === "RDM"){
         random()
         if (randnum ==1){
-            message.reply("(réponse num 1), Merci je vais bien ");
+          var embed = new Discord.RichEmbed()
+          .setDescription("1")
+          .setImage("https://cdn.discordapp.com/attachments/473614695803125790/507191336206598165/FB_IMG_1540575966336.jpg")
+         .setColor("#8800fc")
+      message.channel.sendEmbed(embed)
             console.log(randnum);
         }
      
         if (randnum ==2){
-            message.reply("(réponse 2): Sa ne va pas fort en ce moment");
+          var embed = new Discord.RichEmbed()
+          .setDescription("2")
+          .setImage("https://cdn.discordapp.com/attachments/473614695803125790/507191766286598154/image4.jpg")
+         .setColor("#8800fc")
+      message.channel.sendEmbed(embed)
             console.log(randnum);
         }
     }
