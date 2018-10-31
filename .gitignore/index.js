@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 var prefix = ("~")
+var randnum = 0;
 
 bot.on('ready', function() {
     bot.user.setGame("Commandes: ~help");
@@ -107,8 +108,31 @@ bot.on('message', message => {
       message.channel.sendEmbed(embed)
         }
 
-        if (message.content === "~credits Angel"){
-          message.channel.sendMessage("Angel à 50000000000$ 💰 !");
+      if (message.content === "cat"){
+        
+        if (randnum == 1){
+          message.reply("Réponse numéro 1");
+          
+        }
+
+        if (randnum == 2){
+          message.reply("Réponse numéro 2");
+          
+        }
+
+        if (randnum == 3){
+          message.reply("Réponse numéro 3");
+          
+        }
+
       }
+     
+      function random(min, max) {
+        min = Math.cell(0);
+        max = Math.floor(5);
+      randnum = Math.floor(Math.random() * (max - min +1) +min);
+      }
+
+
         
     });
