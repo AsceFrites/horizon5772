@@ -82,8 +82,9 @@ bot.on('message', message => {
           .setTitle(message.content.slice("~sondage ".length))
           console.log("sondage")
           message.channel.send({embed})
-          then(embedMessage => {
-            embedMessage.react("👍");
+          then(embed => {
+            embed.react("👍");
+            
 
           })
           
