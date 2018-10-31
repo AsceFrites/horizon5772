@@ -162,10 +162,22 @@ bot.on('message', message => {
             console.log(randnum);
         }
 
-        if(message.content === "~vent") { 
-          message.delete()
-          message.reply("https://cdn.discordapp.com/attachments/468475819682168874/507198687064227850/irma-ouragan-vents.gif");              
-          }
+       
+        var randroll = 0
+
+        function random(min, max){
+          min = Math.ceil(0);
+          max = Math.floor(100);
+          randroll = Math.floor(Math.random() * (max - min +1)+ min);
+      }
+
+      if (message.content === "~roll"){
+        var embed = new Discord.RichEmbed()
+          .setDescription("Tu as tiré le : ", randroll)
+          message.channel.sendEmbed(embed)
+        
+      }
+       
     }
       
      
