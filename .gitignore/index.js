@@ -33,7 +33,7 @@ bot.on('message', message => {
           if (message.content === '~avatar') {
             let embed = new Discord.RichEmbed()
           .setImage(message.author.avatarURL)
-          .setColor('#275BF0')
+          .setColor("RANDOM")
             message.channel.send(embed)
           }
           
@@ -45,7 +45,10 @@ bot.on('message', message => {
             .addField("Crée le", message.guild.createdAt)
             .addField("Tu as rejoins le", message.member.joinedAt)
             .addField("Utilisateur sur le discord", message.guild.memberCount)
-            .setColor("#0b8cf1")
+            .addField("Nombre de catégories et de salons", message.guild.channels.size)
+            .addField("ID :id: ", `${client.user.id}`)
+            .setFooter("Test")
+            .setColor("RANDOM")
          message.channel.sendEmbed(embed)
            
          }
@@ -62,7 +65,7 @@ bot.on('message', message => {
           .setTitle("Liste des commandes :")
           .addField("**~test : **", "Tester le bot.")
          .addField("**~aemebed : **", "Créer des Embed.")
-         .addField("**Hugs :**", "Faites des câlins ! Fonction bientôt ameliorée..~")
+         .addField("**Hugs :**", "Faites des câlins !")
          .addField("**~avatar :**", "Afficher votre propre avatar.")
          .addField("**~infodiscord :**", "Infos à propos d'Aena.")
          .addField("**~say :**", "Faites dire ce que vous souhaitez au bot !.")
@@ -211,11 +214,5 @@ bot.on('message', message => {
         
     }
      
-    
-    if (message.content.split(" ")[0] == "~clear"){//clear
-      if(message.guild.member(message.author).hasPermission("MANAGE_MESSAGE")) {
-      return message.channel.send("Vous n'avez pas la permission !")}
-      else {message.delete(message.content.slice("~clear ".length))
-      }
-       }
+
      });
