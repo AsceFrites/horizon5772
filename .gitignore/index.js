@@ -87,15 +87,14 @@ bot.on('message', message => {
 
           })
           
-          if(message.content === "~listfun") { 
+          if(message.content === "~info") { 
             var embed = new Discord.RichEmbed()
-            .setDescription("***Liste des commandes fun :***")
-            .addField("**cat : **", "Fait apparaitre une image de chat.")
-            .addField("**croix : **", "...✟...")
-            .addField("**Et d'autres à venir..**", "Proposez vos idées..")
-           .setColor("#8800fc")
+            .setDescription("Information du Discord")
+           .addField("Utilisateur sur le discord", message.guild.memberCount)
+           .setColor("#0b8cf1")
         message.channel.sendEmbed(embed)
-          }
+          
+        }
          
 
         }
