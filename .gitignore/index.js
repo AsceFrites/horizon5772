@@ -37,9 +37,6 @@ bot.on('message', message => {
             message.channel.send(embed)
           }
           
-        if (message.content == "Hugs") { 
-             message.channel.sendMessage("***Tiens un câlin !*** :D");
-        }
         
        if(message.content === "~infodiscord") { 
              var embed = new Discord.RichEmbed()
@@ -62,7 +59,7 @@ bot.on('message', message => {
 
         if(message.content === "~help") { 
           var embed = new Discord.RichEmbed()
-          .setTitle("***Liste des commandes :***")
+          .setTitle("Liste des commandes :")
           .addField("**~test : **", "Tester le bot.")
          .addField("**~aemebed : **", "Créer des Embed.")
          .addField("**Hugs :**", "Faites des câlins ! Fonction bientôt ameliorée..~")
@@ -182,7 +179,7 @@ bot.on('message', message => {
         random()
         if (randhug ==1){
           var embed = new Discord.RichEmbed()
-          .setDescription("*Tiens un câlin !* :D")
+          .setDescription("***Tiens un câlin ! :D***")
          .setColor("#8800fc")
       message.channel.sendEmbed(embed)
             console.log(randhug);
@@ -190,7 +187,7 @@ bot.on('message', message => {
      
         if (randhug ==2){
           var embed = new Discord.RichEmbed()
-          .setDescription("Non ?! T'as cru que j'étais ton pote ? :sure: ")
+          .setDescription("***Non ?! T'as cru que j'étais ton pote ?*** ")
          .setColor("#000000")
       message.channel.sendEmbed(embed)
             console.log(randhug);
@@ -198,7 +195,7 @@ bot.on('message', message => {
 
         if (randhug ==3){
           var embed = new Discord.RichEmbed()
-          .setDescription("Petit câlin - qui fait du bien.~")
+          .setDescription("***Petit câlin - qui fait du bien.~***")
          .setColor("#C71585")
       message.channel.sendEmbed(embed)
             console.log(randhug);
@@ -206,7 +203,7 @@ bot.on('message', message => {
 
         if (randhug ==4){
           var embed = new Discord.RichEmbed()
-          .setDescription(" :love: ")
+          .setDescription("***Full of hugs for you!*** ")
          .setColor("#FFB6C1")
       message.channel.sendEmbed(embed)
             console.log(randhug);
