@@ -116,6 +116,8 @@ bot.on('message', message => {
       }
 
       if (message.content === "Random") {
+        random()
+        
         if (randnum == 1){
           message.reply("Réponse 1")
         }
