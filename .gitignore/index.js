@@ -172,7 +172,9 @@ bot.on('message', message => {
       }
 
       if (message.content === "~roll"){
-        var embed = new Discord.RichEmbed()
+        random()
+        
+      var embed = new Discord.RichEmbed()
           .setDescription("Tu as tiré le : ", randroll)
           message.channel.sendEmbed(embed)
         
