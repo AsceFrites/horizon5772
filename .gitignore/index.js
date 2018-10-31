@@ -91,8 +91,12 @@ bot.on('message', message => {
           
         }
 
-        if (message.content === "~croix"){
-          message.channel.sendMessage("https://cdn.discordapp.com/avatars/387291278670430208/46127661d0b7e952e31885c654936618.png?size=2048")
-            }
+        if(message.content === "croix") { 
+          var embed = new Discord.RichEmbed()
+          .setDescription("Une croix. De ce qu'il y a de plus basique..")
+          .setImage("https://cdn.discordapp.com/avatars/387291278670430208/46127661d0b7e952e31885c654936618.png?size=2048")
+         .setColor("#8800fc")
+      message.channel.sendEmbed(embed)
+        }
         
     });
