@@ -24,7 +24,7 @@ bot.on('message', message => {
     if (message.content.split(" ")[0] == "~aembed"){//EMBED
              message.delete()
              var embed = new Discord.RichEmbed()
-            .setColor("#4169E1")
+            .setColor("#FF7F50")
             .setDescription(message.content.slice("~aembed ".length))
             console.log("Embed")
             message.channel.send({embed})
