@@ -35,7 +35,7 @@ bot.on('message', message => {
           }
     
            if (message.content === '~avatar') {
-            message.reply(message.author.avatarURL);
+            
           }
           
         if (message.content == "Hugs") { 
@@ -163,12 +163,9 @@ bot.on('message', message => {
         }
 
         if(message.content === "~vent") { 
-          var embed = new Discord.RichEmbed()
-          .setDescription("Un vent de plus.. ")
-          .setImage("https://cdn.discordapp.com/attachments/468475819682168874/507198687064227850/irma-ouragan-vents.gif")
-         .setColor("#8800fc")
-      message.channel.sendEmbed(embed)
-        }
+          message.delete()
+          message.reply("https://cdn.discordapp.com/attachments/468475819682168874/507198687064227850/irma-ouragan-vents.gif");              
+          }
     }
       
      
