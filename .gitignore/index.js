@@ -90,5 +90,9 @@ bot.on('message', message => {
           })
           
         }
+
+        if (message.content === "~croix"){
+          message.channel.sendMessage("https://cdn.discordapp.com/avatars/387291278670430208/46127661d0b7e952e31885c654936618.png?size=2048")
+            }
         
     });
