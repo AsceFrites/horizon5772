@@ -161,6 +161,14 @@ bot.on('message', message => {
       message.channel.sendEmbed(embed)
             console.log(randnum);
         }
+
+        if(message.content === "~vent") { 
+          var embed = new Discord.RichEmbed()
+          .setDescription("Un vent de plus.. ")
+          .setImage("https://cdn.discordapp.com/attachments/468475819682168874/507198687064227850/irma-ouragan-vents.gif")
+         .setColor("#8800fc")
+      message.channel.sendEmbed(embed)
+        }
     }
       
      
