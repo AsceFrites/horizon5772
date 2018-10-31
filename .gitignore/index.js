@@ -29,6 +29,13 @@ bot.on('message', message => {
             console.log("Embed")
             message.channel.send({embed})
           }
+
+          if (message.content === '~aembedimage') {
+            let embed = new Discord.RichEmbed()
+          .setImage("https://cdn.discordapp.com/attachments/469326888528248832/473590583114334209/image.jpg")
+          .setColor("#FF7F50")
+            message.channel.send(embed)
+          }
     
           if (message.content === '~avatar') {
             let embed = new Discord.RichEmbed()
