@@ -11,7 +11,7 @@ bot.on('ready', function() {
 bot.login(process.env.Token);
 
 bot.on('message', message => {
-        if (message.content === prefix + "Start"){
+        if (message.content === prefix + "start"){
             message.channel.sendMessage("Bot en cours d'éxecution !");
         }
     
@@ -79,7 +79,7 @@ bot.on('message', message => {
         if (message.content.split(" ")[0] == "~sondage"){//sondage
           message.delete()
           var embed = new Discord.RichEmbed()
-          .setColor("#8801fd")
+          .setColor("#b83e3c")
           .setTitle(message.content.slice("~sondage ".length))
           console.log("sondage")
           message.channel.send({embed}).then(embedMessage => {
