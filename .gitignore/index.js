@@ -31,7 +31,7 @@ bot.on('message', message => {
           }
     
            if (message.content === '~avatar') {
-            var user = message.mentions.users.first();
+            var users = message.mentions.users.first();
             let embed = new Discord.RichEmbed()
           .setImage(users.avatarURL)
           .setColor('#275BF0')
