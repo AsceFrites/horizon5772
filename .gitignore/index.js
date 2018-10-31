@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 var prefix = ("~")
-var randnum = 0;
 
 bot.on('ready', function() {
     bot.user.setGame("Commandes: ~help");
@@ -108,30 +107,23 @@ bot.on('message', message => {
       message.channel.sendEmbed(embed)
         }
 
-      if (message.content === "~rdm"){
-        random();
-        
+        var randnum = 0
+
+        function random(min, max) {
+          min = Math.ceil(0)
+          max = Math.floor(2)
+          randnum = Math.floor(Math.random() * (max - min +1) + min)
+      }
+
+      if (message.content === "Random") {
         if (randnum == 1){
-          message.reply("Réponse numéro 1");
-          
+          message.reply("Réponse 1")
         }
 
         if (randnum == 2){
-          message.reply("Réponse numéro 2");
+          message.reply("Réponse 2")
         }
-
-        if (randnum == 3){
-          message.reply("Réponse numéro 3");
-        }
-
       }
+      
      
-      function random(min, max) {
-        min = Math.cell(0);
-        max = Math.floor(3);
-       randnum = Math.floor(Math.random() * (max - min +1) + min);
-    }
-
-
-        
-    });
+     });
