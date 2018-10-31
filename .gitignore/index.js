@@ -30,10 +30,9 @@ bot.on('message', message => {
             message.channel.send({embed})
           }
     
-           if (message.content === '~avatar') {
-            var users = message.mentions.users.first();
+          if (message.content === '~avatar') {
             let embed = new Discord.RichEmbed()
-          .setImage(users.avatarURL)
+          .setImage(message.author.avatarURL)
           .setColor('#275BF0')
             message.channel.send(embed)
           }
