@@ -46,7 +46,7 @@ bot.on('message', message => {
             .addField("Tu as rejoins le", message.member.joinedAt)
             .addField("Utilisateur sur le discord", message.guild.memberCount)
             .addField("Nombre de catégories et de salons", message.guild.channels.size)
-            .setFooter("Test")
+            .setFooter("Aena")
             .setColor("RANDOM")
          message.channel.sendEmbed(embed)
            
@@ -114,7 +114,7 @@ bot.on('message', message => {
           var embed = new Discord.RichEmbed()
           .setDescription("1")
           .setImage("https://cdn.discordapp.com/attachments/473614695803125790/507191336206598165/FB_IMG_1540575966336.jpg")
-         .setColor("#8800fc")
+         .setColor("RANDOM")
       message.channel.sendEmbed(embed)
             console.log(randnum);
         }
@@ -123,7 +123,7 @@ bot.on('message', message => {
           var embed = new Discord.RichEmbed()
           .setDescription("2")
           .setImage("https://cdn.discordapp.com/attachments/473614695803125790/507191766286598154/image4.jpg")
-         .setColor("#8800fc")
+         .setColor("RANDOM")
       message.channel.sendEmbed(embed)
             console.log(randnum);
         }
@@ -132,7 +132,7 @@ bot.on('message', message => {
           var embed = new Discord.RichEmbed()
           .setDescription("3")
           .setImage("https://media.discordapp.net/attachments/473614695803125790/507197431847452674/Screenshot_20181031-124649.png?width=429&height=665")
-         .setColor("#8800fc")
+         .setColor("RANDOM")
       message.channel.sendEmbed(embed)
             console.log(randnum);
         }
@@ -141,7 +141,7 @@ bot.on('message', message => {
           var embed = new Discord.RichEmbed()
           .setDescription("4")
           .setImage("https://media.discordapp.net/attachments/473614695803125790/507191436077301781/FB_IMG_1537528278988.jpg")
-         .setColor("#8800fc")
+         .setColor("#RANDOM")
       message.channel.sendEmbed(embed)
             console.log(randnum);
         }
@@ -150,7 +150,7 @@ bot.on('message', message => {
           var embed = new Discord.RichEmbed()
           .setDescription("5")
           .setImage("https://media.discordapp.net/attachments/473614695803125790/507197854629101568/Screenshot_20181024-235809.png")
-         .setColor("#8800fc")
+         .setColor("RANDOM")
       message.channel.sendEmbed(embed)
             console.log(randnum);
         }
