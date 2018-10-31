@@ -175,7 +175,8 @@ bot.on('message', message => {
         random()
         
       var embed = new Discord.RichEmbed()
-          .setDescription("Tu as tiré le : ", randroll)
+          .addField("Tu as tiré le : ", randroll)
+          .setColor("#8800fc")
           message.channel.sendEmbed(embed)
         
       }
