@@ -15,13 +15,9 @@ bot.on('message', message => {
             message.channel.sendMessage("Bot en cours d'éxecution !");
         }
     
-        if (message.content === "~test5772"){
-            message.reply("test :)");
-            console.log("Commande Salut effectué")
-            message.reply;
-        }
+        
         if (message.content === "~test"){
-            message.channel.sendMessage("```Test 1...``` \n ```Test2 effectué``` \n ```Bot OK```")
+            message.channel.sendMessage("```css \n Test 1...```  ```Test1 OK```  ```Bot OK```")
               }
           
     
@@ -66,15 +62,17 @@ bot.on('message', message => {
           .setDescription("***Liste des commandes :***")
           .addField("**~test : **", "Tester le bot.")
          .addField("**~aemebed : **", "Créer des Embed.")
-         .addField("**Hugs :**", "Faites des câlins !")
-         .addField("**~avatar :**", "Afficher votre avatar.")
+         .addField("**Hugs :**", "Faites des câlins ! Fonction bientôt ameliorée..~")
+         .addField("**~avatar :**", "Afficher votre propre avatar.")
          .addField("**~infodiscord :**", "Infos à propos d'Aena.")
          .addField("**~say :**", "Faites dire ce que vous souhaitez au bot !.")
          .addField("**~sondage :**", "Faites voter vos idées !.")
+         .addField("***~funlist :**", "Afficher la liste des commandes.. inutile")
          .addField(" \n ***Bonne visiste sur Aena !***", "**:D**")
          .setColor("#8800fc")
       message.channel.sendEmbed(embed)
         }
+
 
         if (message.content.split(" ")[0] == "~sondage"){//sondage
           message.delete()
@@ -89,20 +87,22 @@ bot.on('message', message => {
 
           })
           
+          if(message.content === "~funlist") { 
+            var embed = new Discord.RichEmbed()
+            .setDescription("***Liste des commandes fun :***")
+            .addField("**cat : **", "Fait apparaitre une image de chat.")
+            .addField("**croix : **", "...✟...")
+            .addField("**Et d'autres à venir..**", "Proposez vos idées..")
+           .setColor("#8800fc")
+        message.channel.sendEmbed(embed)
+          }
+
         }
 
         if(message.content === "croix") { 
           var embed = new Discord.RichEmbed()
           .setDescription("Une croix. De ce qu'il y a de plus basique..")
           .setImage("https://cdn.discordapp.com/avatars/387291278670430208/46127661d0b7e952e31885c654936618.png?size=2048")
-         .setColor("#8800fc")
-      message.channel.sendEmbed(embed)
-        }
-
-        if(message.content === "ollie") { 
-          var embed = new Discord.RichEmbed()
-          .setDescription("Un chat. De ce qu'il y a de plus basique..")
-          .setImage("https://cdn.discordapp.com/attachments/468475819682168874/507159166671126568/Screenshot_20181031-122556.png")
          .setColor("#8800fc")
       message.channel.sendEmbed(embed)
         }
@@ -162,24 +162,6 @@ bot.on('message', message => {
             console.log(randnum);
         }
 
-       
-        var randroll = 0
-
-        function random(min, max){
-          min = Math.ceil(0);
-          max = Math.floor(100);
-          randroll = Math.floor(Math.random() * (max - min +1)+ min);
-      }
-
-      if (message.content === "~roll"){
-        random()
-        
-           var embed = new Discord.RichEmbed()
-          .addField("Tu as tiré le : ", randroll)
-          .setColor("#8800fc")
-       message.channel.sendEmbed(embed)
-           console.log(randroll);
-        }
        
     }
       
