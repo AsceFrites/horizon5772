@@ -70,19 +70,22 @@ bot.on('message', message => {
          .addField("**~avatar :**", "Afficher votre avatar.")
          .addField("**~infodiscord :**", "Infos à propos d'Aena.")
          .addField("**~say :**", "Faire dire ce que vous souhaitez au bot !.")
-         .addField(" \n ***Bonne visiste sur Aena !***")
+         .addField(" \n ***Bonne visiste sur Aena !***",)
          .setColor("#1EE9CE")
       message.channel.sendEmbed(embed)
         }
 
-        if (message.content.split(" ")[0] == "~sondage"){//EMBED
+        if (message.content.split(" ")[0] == "~sondage"){//sondage
           message.delete()
           var embed = new Discord.RichEmbed()
           .setColor("#febfd2")
           .setTitle(message.content.slice("~sondage ".length))
           console.log("sondage")
           message.channel.send({embed})
-        message.react(":poceblo:")
+          .then(message => {
+          message.react(":poceblo:")
           message.react(":poceroge:")
+          })
         }
+        
     });
