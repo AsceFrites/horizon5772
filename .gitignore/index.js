@@ -81,10 +81,9 @@ bot.on('message', message => {
           .setColor("#febfd2")
           .setTitle(message.content.slice("~sondage ".length))
           console.log("sondage")
-          message.channel.send({embed})
-          then(embed => {
-            embed.react("👍");
-            
+          message.channel.send({embed}).then(embedMessage => {
+            embedMessage.react("👍");
+
 
           })
           
