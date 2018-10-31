@@ -118,12 +118,10 @@ bot.on('message', message => {
 
         if (randnum == 2){
           message.reply("Réponse numéro 2");
-          
         }
 
         if (randnum == 3){
           message.reply("Réponse numéro 3");
-          
         }
 
       }
@@ -131,7 +129,7 @@ bot.on('message', message => {
       function random(min, max) {
         min = Math.cell(0);
         max = Math.floor(3);
-      randnum = Math.floor(Math.random() * (max - min +1) +min);
+      randnum = Math.floor(Math.random() * (max - min +1) + min);
       }
 
 
