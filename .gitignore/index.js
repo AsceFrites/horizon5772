@@ -100,14 +100,14 @@ bot.on('message', message => {
 
     var randnum = 0
 
-        function random(min, max){
+        function randomc(min, max){
           min = Math.ceil(0);
           max = Math.floor(5);
           randnum = Math.floor(Math.random() * (max - min +1)+ min);
       }
 
       if (message.content === "cat"){
-        random()
+        randomc()
         if (randnum ==1){
           var embed = new Discord.RichEmbed()
           .setDescription("1")
