@@ -25,13 +25,17 @@ bot.on('message', message => {
              message.delete()
              var embed = new Discord.RichEmbed()
             .setColor("#febfd2")
-            .setTitle(message.content.slice("~aembed ".length))
-            console.log("Emmbed")
+            .setDescription(message.content.slice("~aembed ".length))
+            console.log("Embed")
             message.channel.send({embed})
           }
     
            if (message.content === '~avatar') {
-            
+            var user = message.mentions.users.first();
+            let embed = new Discord.RichEmbed()
+          .setImage(users.avatarURL)
+          .setColor('#275BF0')
+            message.channel.send(embed)
           }
           
         if (message.content == "Hugs") { 
@@ -40,7 +44,7 @@ bot.on('message', message => {
         
        if(message.content === "~infodiscord") { 
              var embed = new Discord.RichEmbed()
-             .setDescription("Information du Discord")
+             .setTitle("Information du Discord")
              .addField("Nom du discord", message.guild.name)
             .addField("Crée le", message.guild.createdAt)
             .addField("Tu as rejoins le", message.member.joinedAt)
@@ -59,7 +63,7 @@ bot.on('message', message => {
 
         if(message.content === "~help") { 
           var embed = new Discord.RichEmbed()
-          .setDescription("***Liste des commandes :***")
+          .setTitle("***Liste des commandes :***")
           .addField("**~test : **", "Tester le bot.")
          .addField("**~aemebed : **", "Créer des Embed.")
          .addField("**Hugs :**", "Faites des câlins ! Fonction bientôt ameliorée..~")
@@ -78,7 +82,7 @@ bot.on('message', message => {
           message.delete()
           var embed = new Discord.RichEmbed()
           .setColor("#b83e3c")
-          .setTitle(message.content.slice("~sondage ".length))
+          .setDescription(message.content.slice("~sondage ".length))
           console.log("sondage")
           message.channel.send({embed}).then(embedMessage => {
             embedMessage.react("👍");
