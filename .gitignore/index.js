@@ -67,7 +67,7 @@ bot.on('message', message => {
          .addField("**~infodiscord :**", "Infos à propos d'Aena.")
          .addField("**~say :**", "Faites dire ce que vous souhaitez au bot !.")
          .addField("**~sondage :**", "Faites voter vos idées !.")
-         .addField("***~funlist :**", "Afficher la liste des commandes.. inutile")
+         .addField("**~funlist :**", "Afficher la liste des commandes.. inutile")
          .addField(" \n ***Bonne visiste sur Aena !***", "**:D**")
          .setColor("#8800fc")
       message.channel.sendEmbed(embed)
@@ -93,8 +93,8 @@ bot.on('message', message => {
             .addField("**cat : **", "Fait apparaitre une image de chat.")
             .addField("**croix : **", "...✟...")
             .addField("**Et d'autres à venir..**", "Proposez vos idées..")
-           .setColor("#8800fc")
-        message.channel.sendEmbed(embed)
+            .setColor("#8800fc")
+            message.channel.send({embed})
           }
 
         }
