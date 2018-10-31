@@ -86,17 +86,7 @@ bot.on('message', message => {
 
 
           })
-          
-          if(message.content === "~listfun") { 
-            var embed1 = new Discord.RichEmbed()
-            .setDescription("***Liste des commandes fun :***")
-            .addField("**cat : **", "Fait apparaitre une image de chat.")
-            .addField("**croix : **", "...✟...")
-            .addField("**Et d'autres à venir..**", "Proposez vos idées..")
-           .setColor("#8800fc")
-        message.channel.sendEmbed(embed1)
-          }
-         
+              
 
         }
 
@@ -164,6 +154,16 @@ bot.on('message', message => {
         }
 
        
+    }
+
+    if(message.content === "~listfun") { 
+      var embed1 = new Discord.RichEmbed()
+      .setDescription("***Liste des commandes fun :***")
+      .addField("**cat : **", "Fait apparaitre une image de chat.")
+      .addField("**croix : **", "...✟...")
+      .addField("**Et d'autres à venir..**", "Proposez vos idées..")
+     .setColor("#8800fc")
+  message.channel.sendEmbed(embed1)
     }
       
      
