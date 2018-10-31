@@ -109,23 +109,24 @@ bot.on('message', message => {
 
         var randnum = 0
 
-        function random(min, max) {
-          min = Math.ceil(0)
-          max = Math.floor(2)
-          randnum = Math.floor(Math.random() * (max - min +1) + min)
+        function random(min, max){
+          min = Math.ceil(0);
+          max = Math.floor(2);
+          randnum = Math.floor(Math.random() * (max - min +1)+ min);
       }
 
-      if (message.content === "Random") {
+      if (message.content === " Codis?"){
         random()
-        
-        if (randnum == 1){
-          message.reply("Réponse 1")
+        if (randnum ==1){
+            message.reply("(réponse num 1), Merci je vais bien ");
+            console.log(randnum);
         }
-
-        if (randnum == 2){
-          message.reply("Réponse 2")
+     
+        if (randnum ==2){
+            message.reply("(réponse 2): Sa ne va pas fort en ce moment");
+            console.log(randnum);
         }
-      }
+    }
       
      
      });
