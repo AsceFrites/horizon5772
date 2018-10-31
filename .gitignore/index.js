@@ -83,7 +83,7 @@ bot.on('message', message => {
           console.log("sondage")
           message.channel.send({embed}).then(embedMessage => {
             embedMessage.react("👍");
-            embedMessage.react(":thumbsdown:");
+            embedMessage.react("👎");
 
 
           })
