@@ -12,7 +12,7 @@ bot.login(process.env.Token);
 
 bot.on('message', message => {
         if (message.content === prefix + "help"){
-            message.channel.sendMessage("Liste des commandes: \n **~test** : Tester le bot \n **~aembed** : Créer des Embed \n **Hugs** : Faites un câlin ! \n **~avatar** : Afficher votre avatar \n **~infodiscord** : Infos à propos d'Aena \n **~say** : Lui faire dire quelque chose \n ***Bonne visite sur Aena ! :D***");
+            message.channel.sendMessage("Liste des commandes: \n **~test** : Tester le bot \n **~aembed** : Créer des Embed \n **Hugs** : Faites un câlin ! \n **~avatar** : Afficher votre avatar \n **~infodiscord** : Infos à propos d'Aena \n ***Bonne visite sur Aena ! :D***");
         }
     
         if (message.content === "~test5772"){
@@ -21,15 +21,16 @@ bot.on('message', message => {
             message.reply;
         }
         if (message.content === "~test"){
-            message.channel.sendMessage("Test \n Test2 effectué \n ```Bot OK```")
-        }
+            message.channel.sendMessage("```Test 1...``` \n Test2 effectué \n ```Bot OK```")
+              }
           
     
     if (message.content.split(" ")[0] == "~aembed"){//EMBED
             var embed = new Discord.RichEmbed()
+            message.delete()
             .setColor("#febfd2")
             .setTitle(message.content.slice("~aembed ".length))
-            console.log("Commande test")
+            console.log("Emmbed")
             message.channel.send({embed})
           }
     
@@ -60,5 +61,28 @@ bot.on('message', message => {
           message.channel.sendMessage(str)
         }
 
-      
+        if(message.content === "~help2") { 
+          var embed = new Discord.RichEmbed()
+          .setDescription("***Liste des commandes :***")
+          .addField("**~test : ** Tester le bot.")
+         .addField("**~aemebed : ** Créer des Embed.")
+         .addField("**Hugs :** Faites des câlins !")
+         .addField("**~avatar :** Afficher votre avatar.")
+         .addField("**~infodiscord :** Infos à propos d'Aena.")
+         .addField("**~say :** Faire dire ce que vous souhaitez au bot !.")
+         .addField(" \n ***Bonne visiste sur Aena !")
+         .setColor("#1EE9CE")
+      message.channel.sendEmbed(embed)
+        }
+
+        if (message.content.split(" ")[0] == "~sondage"){//EMBED
+          var embed = new Discord.RichEmbed()
+          message.delete()
+          .setColor("#febfd2")
+          .setTitle(message.content.slice("~sondage ".length))
+          console.log("sondage")
+          message.channel.send({embed})
+        message.react(":poceblo:")
+          message.react(":poceroge:")
+        }
     });
