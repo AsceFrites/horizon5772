@@ -46,7 +46,6 @@ bot.on('message', message => {
             .addField("Tu as rejoins le", message.member.joinedAt)
             .addField("Utilisateur sur le discord", message.guild.memberCount)
             .addField("Nombre de catégories et de salons", message.guild.channels.size)
-            .addField("ID :id: ", `${client.user.id}`)
             .setFooter("Test")
             .setColor("RANDOM")
          message.channel.sendEmbed(embed)
