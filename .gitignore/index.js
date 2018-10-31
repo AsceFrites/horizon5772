@@ -83,8 +83,8 @@ bot.on('message', message => {
           console.log("sondage")
           message.channel.send({embed})
           .then(message => {
-          message.react(":poceblo:")
-          message.react(":poceroge:")
+          message.react("507122264601526284")
+          message.react("507122118199214080")
           })
         }
         
