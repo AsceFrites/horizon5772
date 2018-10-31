@@ -77,7 +77,7 @@ bot.on('message', message => {
         if (message.content.split(" ")[0] == "~sondage"){//sondage
           message.delete()
           var embed = new Discord.RichEmbed()
-          .setColor("#b83e3c")
+          .setColor("RANDOM")
           .setDescription(message.content.slice("~sondage ".length))
           console.log("sondage")
           message.channel.send({embed}).then(embedMessage => {
@@ -212,4 +212,14 @@ bot.on('message', message => {
     }
      
     
+    if(message.content.startsWith("~clear")) {
+      if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGE")) return message.channel.send("Vous n'avez pas la permission !");
+
+      let args = message.content.split(" ").slice(1);
+
+      if(!args[0]) return message.channel.send("Tu dois préciser un nombre de messages à supprimer !")
+      message.channel.bulkDelete(args[0]).then(() => {
+          message.channel.send(`${args[0]} messages ont été supprimés !`);
+      });
+    }
      });
