@@ -107,7 +107,7 @@ bot.on('message', message => {
       message.channel.sendEmbed(embed)
         }
 
-        var randnum = 0
+    var randnum = 0
 
         function random(min, max){
           min = Math.ceil(0);
@@ -115,7 +115,7 @@ bot.on('message', message => {
           randnum = Math.floor(Math.random() * (max - min +1)+ min);
       }
 
-      if (message.content === " Codis?"){
+      if (message.content === "RDM"){
         random()
         if (randnum ==1){
             message.reply("(réponse num 1), Merci je vais bien ");
