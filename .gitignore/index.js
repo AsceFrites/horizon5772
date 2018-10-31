@@ -98,5 +98,17 @@ bot.on('message', message => {
          .setColor("#8800fc")
       message.channel.sendEmbed(embed)
         }
+
+        if(message.content === "ollie") { 
+          var embed = new Discord.RichEmbed()
+          .setDescription("Un chat. De ce qu'il y a de plus basique..")
+          .setImage("https://cdn.discordapp.com/attachments/468475819682168874/507159166671126568/Screenshot_20181031-122556.png")
+         .setColor("#8800fc")
+      message.channel.sendEmbed(embed)
+        }
+
+        if (message.content === "~credits Angel"){
+          message.channel.sendMessage("Angel à 50000000000$ 💰 !");
+      }
         
     });
