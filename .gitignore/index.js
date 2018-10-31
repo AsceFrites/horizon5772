@@ -30,12 +30,6 @@ bot.on('message', message => {
             message.channel.send({embed})
           }
 
-          if (message.content === '~aembedimage') {
-            let embed = new Discord.RichEmbed()
-          .setImage("https://cdn.discordapp.com/attachments/469326888528248832/473590583114334209/image.jpg")
-          .setColor("#FF7F50")
-            message.channel.send(embed)
-          }
     
           if (message.content === '~avatar') {
             let embed = new Discord.RichEmbed()
@@ -220,5 +214,34 @@ bot.on('message', message => {
         
     }
      
+    client.on("guildCreate", guild => {
+      console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+      client.user.setActivity(`Serving ${client.guilds.size} servers`);
+    });
+    
+    client.on("guildDelete", guild => {
+      console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
+      client.user.setActivity(`Serving ${client.guilds.size} servers`);
+    });
 
+    if(command === "kick") {
+ 
+      if(!message.member.roles.some(r=>["Protecteurs", "Moderateurs"].includes(r.name)) )
+        return message.reply("Sorry, you don't have permissions to use this!");
+      
+ 
+      let member = message.mentions.members.first() || message.guild.members.get(args[0]);
+      if(!member)
+        return message.reply("Please mention a valid member of this server");
+      if(!member.kickable) 
+        return message.reply("I cannot kick this user! Do they have a higher role? Do I have kick permissions?");
+      
+      let reason = args.slice(1).join(' ');
+      if(!reason) reason = "No reason provided";
+  
+      await member.kick(reason)
+        .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
+      message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
+  
+    }
      });
