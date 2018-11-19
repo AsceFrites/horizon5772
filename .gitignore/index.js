@@ -214,18 +214,14 @@ bot.on('message', message => {
         
     }
 
-    if(message.content === "Frites"){ 
+    if(message.startsWith === "Frites"){ 
         var embedfr = new Discord.RichEmbed()
-        .setDescription("**Quelle sauce avec ceci ?**")
-       .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514072613606129675/tempo-65-1080x675.jpg")
-       .setDescription("***Liste des sauces : ***")
-        .addField("**Mayonnaise**", "*Tapez Mayonnaise*")
-        .addField("***Ketchup***", "*Tapez Ketchup*")
+        .setDescription("**Merci de préciser parmis les sauces disponible !**")
+        .setDescription("Commande pour la liste des sauces :")
         .setColor("RANDOM")
        message.channel.sendEmbed(embedfr);
-
-          if(message.content === "Frites"){
-              if(message.content === "Mayonnaise"){
+    }else{
+        if(message.content === "Frites mayonnaise"){
             var embedfr1 = new Discord.RichEmbed()
             .setDescription("**Et voici vos frites mayonnaise !**")
             .setImage("https://media.discordapp.net/attachments/513815805331374082/514080743882883093/241984.jpg")
@@ -235,18 +231,24 @@ bot.on('message', message => {
         message.channel.sendMessage("Merci de préciser une sauce valide");  
         }}
 
-        
-         if(message.content === "Frites"){
-             if(message.content === "Ketchup"){
-            var embedfr2 = new Discord.RichEmbed()
-            .setDescription("**Et voici vos frites surmonté de ketchup !**")
-            .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514080743882883087/barquette-de-frites-avec-du-ketchup-10949896twism.jpg")
+        if(message.startsWith === "Frites"){ 
+            var embedfr = new Discord.RichEmbed()
+            .setDescription("**Merci de préciser parmis les sauces disponible !**")
+            .setDescription("Commande pour la liste des sauces :")
             .setColor("RANDOM")
-            message.channel.sendEmbed(embedfr2);
-         }else{
-         message.channel.sendMessage("Merci de préciser une sauce valide");  
-        }}
-    }
+           message.channel.sendEmbed(embedfr);
+        }else{
+            if(message.content === "Frites ketchup"){
+                var embedfr2 = new Discord.RichEmbed()
+                .setDescription("**Et voici vos frites âgrémentée d'une sauce ketchup !**")
+                .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514080743882883087/barquette-de-frites-avec-du-ketchup-10949896twism.jpg")
+                .setColor("RANDOM")
+              message.channel.sendEmbed(embedfr2);
+             }else{
+            message.channel.sendMessage("Merci de préciser une sauce valide");  
+            }}
+
+        
      
 
      });
