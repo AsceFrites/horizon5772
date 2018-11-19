@@ -25,7 +25,7 @@ bot.on('message', message => {
              message.delete()
              var embed = new Discord.RichEmbed()
             .setColor("#FF7F50")
-            .setDescription(message.content.slice("~aembed ".length))
+            .setDescription(message.content.slice("~embed ".length))
             console.log("Embed")
             message.channel.send({embed})
           }
