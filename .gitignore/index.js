@@ -33,7 +33,6 @@ bot.on('message', message => {
     
           if (message.content === "~avatar") {
         var embed5 = new Discord.RichEmbed()
-            .setDescription("Avatar de : " (message.author.username))
           .setImage(message.author.avatarURL)
           .setColor("RANDOM")
             message.channel.send({embed5})
