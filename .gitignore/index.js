@@ -21,7 +21,7 @@ bot.on('message', message => {
               }
           
     
-    if (message.content.split(" ")[0] == "~embed "){//EMBED
+    if (message.content.split(" ")[0] == "~embed"){//EMBED
              message.delete()
              var embed = new Discord.RichEmbed()
             .setColor("#FF7F50")
@@ -33,9 +33,11 @@ bot.on('message', message => {
     
           if (message.content === '~avatar') {
             let embed = new Discord.RichEmbed()
-          .setImage(message.author.avatarURL)
+          .setImage(message.mentions.users.first.avatarURL)
           .setColor("RANDOM")
             message.channel.send(embed)
+          }else{
+              return message.reply("Merci de mentionner l'utilisateur souhaiter !")
           }
           
         
