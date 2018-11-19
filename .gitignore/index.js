@@ -32,10 +32,11 @@ bot.on('message', message => {
 
     
           if (message.content === '~avatar') {
-            let embed = new Discord.RichEmbed()
+            let embed5 = new Discord.RichEmbed()
+            .setDescription("Avatar de : " ("~avatar ".length))
           .setImage(message.mentions.users.first().avatarURL)
           .setColor("RANDOM")
-            message.channel.send(embed)
+            message.channel.send({embed5})
           }
         
        if(message.content === "~infodiscord") { 
