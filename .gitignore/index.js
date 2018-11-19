@@ -31,7 +31,7 @@ bot.on('message', message => {
           }
 
     
-          if (message.content === '~avatar') {
+          if (message.startsWith === '~avatar') {
             let embed5 = new Discord.RichEmbed()
             .setDescription("Avatar de : " ("~avatar ".length))
           .setImage(message.mentions.users.first().avatarURL)
