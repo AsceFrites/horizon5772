@@ -38,6 +38,9 @@ bot.on('message', message => {
           .setColor("RANDOM")
             message.channel.send({embed5})
           }
+        if(message.content === "~avatar"){
+            return message.reply("Merci de mentionner l'utilisateur souhaité")
+        }
         
        if(message.content === "~infodiscord") { 
              var embed = new Discord.RichEmbed()
