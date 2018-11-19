@@ -216,13 +216,13 @@ bot.on('message', message => {
         
 
         if(message.content === "Frites"){//FRITES
-            return message.reply("Merci de mentionner une frite avec une sauce avec la commande *Sauces frites*")
+            return message.reply("Merci de mentionner une frite avec une sauce ! Liste des sauces avec la commande *Sauces frites*")
         }else{
              if(message.content === "Sauces frites"){
                 var embedfr = new Discord.RichEmbed()
                 .setDescription("**Voici la liste des sauces pour vos frites !**")
-                .setDescription("Sauce Mayonnaise : *Frites mayonnaise* ")
-                .setDescription("Sauce Ketchup : *Frites ketchup*")
+                .addField("Sauce Mayonnaise : ", "*Frites mayonnaise* ")
+                .addField("Sauce Ketchup : ", "*Frites ketchup*")
                 .setColor("RANDOM")
                message.channel.sendEmbed(embedfr);
             }
