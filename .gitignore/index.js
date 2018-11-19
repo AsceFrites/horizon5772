@@ -211,16 +211,16 @@ bot.on('message', message => {
       message.channel.sendEmbed(embed)
             console.log(randhug);
         }
-          
-          if(message.content === "Frites") { 
-          var embed = new Discord.RichEmbed()
-          .setDescription("Votre commande a été enregistrée ! :D")
-          .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514072613606129675/tempo-65-1080x675.jpg")
-         .setColor("RANDOM")
-      message.channel.sendEmbed(embed)
-        }
         
     }
+
+    if(message.content === "Frites", "frites") { 
+        var embed = new Discord.RichEmbed()
+        .setDescription("Votre commande a été enregistrée ! :D")
+        .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514072613606129675/tempo-65-1080x675.jpg")
+       .setColor("RANDOM")
+    message.channel.sendEmbed(embed)
+      }
      
 
      });
