@@ -216,12 +216,35 @@ bot.on('message', message => {
 
     if(message.content === "Frites"){ 
         var embedfr = new Discord.RichEmbed()
-        .setDescription("Votre commande a été enregistrée ! :D")
-        .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514072613606129675/tempo-65-1080x675.jpg")
-       .setColor("RANDOM")
-    message.channel.sendEmbed(embedfr);
-    
-      }
+        .addField("**Quelle sauce avec ceci ?**")
+       .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514072613606129675/tempo-65-1080x675.jpg")
+        .addField("***Liste des sauces : ***")
+        .addField("**Mayonnaise**")
+        .addField("***Ketchup***")
+        .setColor("RANDOM")
+       message.channel.sendEmbed(embedfr);
+
+       if(message.content === "Mayonnaise"){
+        var embedfr1 = new Discord.RichEmbed()
+        .addField("**Et voici vos frites mayonnaise !**")
+       .setImage("https://media.discordapp.net/attachments/513815805331374082/514080743882883093/241984.jpg")
+        .setColor("RANDOM")
+       message.channel.sendEmbed(embedfr1);
+       }else{
+        message.channel.sendMessage("Merci de préciser une sauce valide");  
+       }
+
+        
+       if(message.content === "Ketchup"){
+        var embedfr2 = new Discord.RichEmbed()
+        .addField("**Et voici vos frites surmonté de ketchup !**")
+       .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514080743882883087/barquette-de-frites-avec-du-ketchup-10949896twism.jpg")
+        .setColor("RANDOM")
+       message.channel.sendEmbed(embedfr2);
+       }else{
+        message.channel.sendMessage("Merci de préciser une sauce valide");  
+       }
+    }
      
 
      });
