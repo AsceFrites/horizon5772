@@ -17,7 +17,7 @@ bot.on('message', message => {
     
         
         if (message.content === "~test"){
-            message.channel.sendMessage("```css \n Test 1...```  ```Test1 OK```  ```Bot OK```")
+            message.channel.sendMessage("```css \n Test 1..```  ```Test1 OK```  ```Bot OK```")
               }
           
     
