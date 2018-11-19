@@ -47,7 +47,7 @@ bot.on('message', message => {
             .addField("Tu as rejoins le", message.member.joinedAt)
             .addField("Utilisateur sur le discord", message.guild.memberCount)
             .addField("Nombre de catégories et de salons", message.guild.channels.size)
-            .setFooter("Aena")
+            .setFooter("La Friterie")
             .setColor("RANDOM")
          message.channel.sendEmbed(embed)
            
@@ -71,7 +71,7 @@ bot.on('message', message => {
          .addField("**~say :**", "Faites dire ce que vous souhaitez au bot !.")
          .addField("**~sondage :**", "Faites voter vos idées !.")
          .addField("**~listfun :**", "Afficher la liste des commandes.. inutile")
-         .addField(" \n ***Bonne visiste sur Aena !***", "**:D**")
+         .addField(" \n ***Bonne visiste à la Friterie !***", "**:D**")
          .setColor("#8800fc")
       message.channel.sendEmbed(embed)
         }
