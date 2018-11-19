@@ -21,7 +21,7 @@ bot.on('message', message => {
               }
           
     
-    if (message.content.split(" ")[0] == "~aembed"){//EMBED
+    if (message.content.split(" ")[0] == "~embed"){//EMBED
              message.delete()
              var embed = new Discord.RichEmbed()
             .setColor("#FF7F50")
@@ -64,10 +64,10 @@ bot.on('message', message => {
           var embed = new Discord.RichEmbed()
           .setTitle("Liste des commandes :")
           .addField("**~test : **", "Tester le bot.")
-         .addField("**~aemebed : **", "Créer des Embed.")
+         .addField("**~emebed : **", "Créer des Embed.")
          .addField("**Hugs :**", "Faites des câlins !")
          .addField("**~avatar :**", "Afficher votre propre avatar.")
-         .addField("**~infodiscord :**", "Infos à propos d'Aena.")
+         .addField("**~infodiscord :**", "Infos à propos du serveur.")
          .addField("**~say :**", "Faites dire ce que vous souhaitez au bot !.")
          .addField("**~sondage :**", "Faites voter vos idées !.")
          .addField("**~listfun :**", "Afficher la liste des commandes.. inutile")
@@ -210,6 +210,14 @@ bot.on('message', message => {
          .setColor("#FFB6C1")
       message.channel.sendEmbed(embed)
             console.log(randhug);
+        }
+          
+          if(message.content === "Frites") { 
+          var embed = new Discord.RichEmbed()
+          .setDescription("Votre commande a été enregistrée ! :D")
+          .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514072613606129675/tempo-65-1080x675.jpg")
+         .setColor("RANDOM")
+      message.channel.sendEmbed(embed)
         }
         
     }
