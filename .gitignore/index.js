@@ -31,16 +31,13 @@ bot.on('message', message => {
           }
 
     
-          if (message.content.startsWith === "~avatar") {
+          if (message.content === "~avatar") {
         var embed5 = new Discord.RichEmbed()
             .setDescription("Avatar de : " (message.author.username))
           .setImage(message.author.avatarURL)
           .setColor("RANDOM")
             message.channel.send({embed5})
           }
-        if(message.content === "~avatar"){
-            return message.reply("Merci de mentionner l'utilisateur souhaité")
-        }
         
        if(message.content === "~infodiscord") { 
              var embed = new Discord.RichEmbed()
