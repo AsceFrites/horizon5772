@@ -81,6 +81,7 @@ bot.on('message', message => {
             .setTitle("La Carte de la Friterie")
             .addField(" \n Frites ------", "------Avec la commande *Frites*")
             .addField(" \n Et encore d'autres à venir ! ----", "------Bon appétit !")
+            message.channel.sendEmbed(embedC)
         }
 
 
