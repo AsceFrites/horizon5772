@@ -36,8 +36,6 @@ bot.on('message', message => {
           .setImage(message.mentions.users.first.avatarURL)
           .setColor("RANDOM")
             message.channel.send(embed)
-          }else{
-              return message.reply("Merci de mentionner l'utilisateur souhaiter !")
           }
           
         
