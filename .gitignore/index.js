@@ -31,9 +31,9 @@ bot.on('message', message => {
           }
 
     
-          if (message.startsWith === '~avatar') {
-            let embed5 = new Discord.RichEmbed()
-            .setDescription("Avatar de : " ("~avatar ".length))
+          if (message.startsWith === "~avatar") {
+        var embed5 = new Discord.RichEmbed()
+            .setDescription("Avatar de : " (message.mentions.users.first().username))
           .setImage(message.mentions.users.first().avatarURL)
           .setColor("RANDOM")
             message.channel.send({embed5})
