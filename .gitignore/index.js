@@ -216,12 +216,13 @@ bot.on('message', message => {
         
 
         if(message.content === "Frites"){//FRITES
-            return message.reply("Merci de mentionner une frite avec une sauce avec la commande SHOP")
+            return message.reply("Merci de mentionner une frite avec une sauce avec la commande *Sauces frites*")
         }else{
-             if(message.content === "SHOP"){
+             if(message.content === "Sauces frites"){
                 var embedfr = new Discord.RichEmbed()
-                .setDescription("**Merci de préciser parmis les sauces disponible !**")
-                .setDescription("Commande pour la liste des sauces :")
+                .setDescription("**Voici la liste des sauces pour vos frites !**")
+                .setDescription("Sauce Mayonnaise : *Frites mayonnaise* ")
+                .setDescription("Sauce Ketchup : *Frites ketchup*")
                 .setColor("RANDOM")
                message.channel.sendEmbed(embedfr);
             }
@@ -237,7 +238,7 @@ bot.on('message', message => {
             if(message.content === "Frites ketchup"){
                 var embedfr2 = new Discord.RichEmbed()
                 .setDescription("**Et voici vos frites ketchup !**")
-                .setImage("https://media.discordapp.net/attachments/513815805331374082/514080743882883093/241984.jpg")
+                .setImage("https://media.discordapp.net/attachments/513815805331374082/514080743882883087/barquette-de-frites-avec-du-ketchup-10949896twism.jpg?width=663&height=663")
                 .setColor("RANDOM")
               message.channel.sendEmbed(embedfr2);
              }
