@@ -224,7 +224,8 @@ bot.on('message', message => {
         .setColor("RANDOM")
        message.channel.sendEmbed(embedfr);
 
-          if(message.content === "Mayonnaise", "Frites"){
+          if(message.content === "Frites"){
+              if(message.content === "Mayonnaise"){
             var embedfr1 = new Discord.RichEmbed()
             .setDescription("**Et voici vos frites mayonnaise !**")
             .setImage("https://media.discordapp.net/attachments/513815805331374082/514080743882883093/241984.jpg")
@@ -232,10 +233,11 @@ bot.on('message', message => {
           message.channel.sendEmbed(embedfr1);
          }else{
         message.channel.sendMessage("Merci de préciser une sauce valide");  
-        }
+        }}
 
         
-         if(message.content === "Ketchup", "Frites"){
+         if(message.content === "Frites"){
+             if(message.content === "Ketchup"){
             var embedfr2 = new Discord.RichEmbed()
             .setDescription("**Et voici vos frites surmonté de ketchup !**")
             .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514080743882883087/barquette-de-frites-avec-du-ketchup-10949896twism.jpg")
@@ -243,7 +245,7 @@ bot.on('message', message => {
             message.channel.sendEmbed(embedfr2);
          }else{
          message.channel.sendMessage("Merci de préciser une sauce valide");  
-        }
+        }}
     }
      
 
