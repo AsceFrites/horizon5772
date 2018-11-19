@@ -216,9 +216,9 @@ bot.on('message', message => {
         
 
         if(message.content === "Frites"){//FRITES
-            return message.reply("Merci de mentionner une frite avec une sauce")
+            return message.reply("Merci de mentionner une frite avec une sauce avec la commande SHOP")
         }else{
-             if(message.content.startsWith("Frites ")){
+             if(message.content === "SHOP"){
                 var embedfr = new Discord.RichEmbed()
                 .setDescription("**Merci de préciser parmis les sauces disponible !**")
                 .setDescription("Commande pour la liste des sauces :")
@@ -234,7 +234,7 @@ bot.on('message', message => {
               message.channel.sendEmbed(embedfr1);
              }
 
-             if(message.content === "Frites ketchup"){
+            if(message.content === "Frites ketchup"){
                 var embedfr2 = new Discord.RichEmbed()
                 .setDescription("**Et voici vos frites ketchup !**")
                 .setImage("https://media.discordapp.net/attachments/513815805331374082/514080743882883093/241984.jpg")
