@@ -172,7 +172,7 @@ bot.on('message', message => {
     if(message.content === "~listfun") { 
       var embed1 = new Discord.RichEmbed()
       .setDescription("***Liste des commandes fun :***")
-      .addField("**~frites : **", "Fait apparaitre une image de chat.")
+      .addField("**~frites : **", "Fait apparaitre une image de frites !!.")
       .addField("**Hugs :**", "Faites des câlins !")
       .addField("**Et d'autres à venir..**", "Proposez vos idées..")
      .setColor("#8800fc")
