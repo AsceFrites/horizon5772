@@ -227,8 +227,7 @@ bot.on('message', message => {
             .setImage("https://media.discordapp.net/attachments/513815805331374082/514080743882883093/241984.jpg")
             .setColor("RANDOM")
           message.channel.sendEmbed(embedfr1);
-         }else{
-        message.channel.sendMessage("Merci de préciser une sauce valide");  
+         }else{ préciser une sauce valide");  
         }}
 
         if(message.startsWith === "Frites"){ 
@@ -244,9 +243,7 @@ bot.on('message', message => {
                 .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514080743882883087/barquette-de-frites-avec-du-ketchup-10949896twism.jpg")
                 .setColor("RANDOM")
               message.channel.sendEmbed(embedfr2);
-             }else{
-            message.channel.sendMessage("Merci de préciser une sauce valide");  
-            }}
+             };
 
         
      
