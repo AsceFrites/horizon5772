@@ -79,7 +79,7 @@ bot.on('message', message => {
             var embedC = new Discord.RichEmbed()
             .setTitle("La Carte de la Friterie")
             .addField(" \n Frites ------", "------Avec la commande *Frites*")
-            .addField(" \n Une multitude de boisson-----", "-----Avec la commande Boisson")
+            .addField(" \n Une multitude de boisson-----", "-----Avec la commande *~Boissons*")
             .addField(" \n Et encore d'autres à venir ! ----", "------Bon appétit !")
             message.channel.sendEmbed(embedC)
         }
@@ -106,16 +106,16 @@ bot.on('message', message => {
 
         function randomc(min, max){
           min = Math.ceil(0);
-          max = Math.floor(5);
+          max = Math.floor(6);
           randnum = Math.floor(Math.random() * (max - min +1)+ min);
       }
 
-      if (message.content === "cat"){
+      if (message.content === "~frites"){
         randomc()
         if (randnum ==1){
           var embed = new Discord.RichEmbed()
           .setDescription("1")
-          .setImage("https://cdn.discordapp.com/attachments/473614695803125790/507191336206598165/FB_IMG_1540575966336.jpg")
+          .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514163546272038922/frite-belge-friteuse-pro.jpg")
          .setColor("RANDOM")
       message.channel.sendEmbed(embed)
             console.log(randnum);
@@ -124,7 +124,7 @@ bot.on('message', message => {
         if (randnum ==2){
           var embed = new Discord.RichEmbed()
           .setDescription("2")
-          .setImage("https://cdn.discordapp.com/attachments/473614695803125790/507191766286598154/image4.jpg")
+          .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514163545718521868/images_3.jpeg")
          .setColor("RANDOM")
       message.channel.sendEmbed(embed)
             console.log(randnum);
@@ -133,7 +133,7 @@ bot.on('message', message => {
         if (randnum ==3){
           var embed = new Discord.RichEmbed()
           .setDescription("3")
-          .setImage("https://media.discordapp.net/attachments/473614695803125790/507197431847452674/Screenshot_20181031-124649.png?width=429&height=665")
+          .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514163545718521866/ls.jpg")
          .setColor("RANDOM")
       message.channel.sendEmbed(embed)
             console.log(randnum);
@@ -142,7 +142,7 @@ bot.on('message', message => {
         if (randnum ==4){
           var embed = new Discord.RichEmbed()
           .setDescription("4")
-          .setImage("https://media.discordapp.net/attachments/473614695803125790/507191436077301781/FB_IMG_1537528278988.jpg")
+          .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514163544506499072/telechargement_4.jpeg")
          .setColor("#RANDOM")
       message.channel.sendEmbed(embed)
             console.log(randnum);
@@ -151,11 +151,20 @@ bot.on('message', message => {
         if (randnum ==5){
           var embed = new Discord.RichEmbed()
           .setDescription("5")
-          .setImage("https://media.discordapp.net/attachments/473614695803125790/507197854629101568/Screenshot_20181024-235809.png")
+          .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514163543906451479/348s.jpg")
          .setColor("RANDOM")
       message.channel.sendEmbed(embed)
             console.log(randnum);
         }
+
+        if (randnum ==6){
+            var embed = new Discord.RichEmbed()
+            .setDescription("6")
+            .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514163543906451476/536d9bf8b164c6babb8d7b14a2e694c5-1302886126.jpg")
+           .setColor("RANDOM")
+        message.channel.sendEmbed(embed)
+              console.log(randnum);
+          }
 
        
     }
@@ -163,7 +172,7 @@ bot.on('message', message => {
     if(message.content === "~listfun") { 
       var embed1 = new Discord.RichEmbed()
       .setDescription("***Liste des commandes fun :***")
-      .addField("**cat : **", "Fait apparaitre une image de chat.")
+      .addField("**~frites : **", "Fait apparaitre une image de chat.")
       .addField("**Hugs :**", "Faites des câlins !")
       .addField("**Et d'autres à venir..**", "Proposez vos idées..")
      .setColor("#8800fc")
@@ -221,9 +230,10 @@ bot.on('message', message => {
         }else{
              if(message.content === "Sauces frites"){
                 var embedfr = new Discord.RichEmbed()
-                .setDescription("**Voici la liste des sauces pour vos frites !**")
+                .setDescription("**Voici la liste des accompagnements pour vos frites !**")
                 .addField("Sauce Mayonnaise : ", "*Frites mayonnaise* ")
                 .addField("Sauce Ketchup : ", "*Frites ketchup*")
+                .addField("Frites sans sauce : ", "*Frites natures*")
                 .setColor("RANDOM")
                message.channel.sendEmbed(embedfr);
             }
@@ -244,12 +254,16 @@ bot.on('message', message => {
               message.channel.sendEmbed(embedfr2);
              }
             
+             if(message.content === "Frites natures"){
+                var embedfr22 = new Discord.RichEmbed()
+                .setDescription("**Et voici vos frites natures !**")
+                .setImage("https://cdn.discordapp.com/attachments/513815805331374082/514165247809028096/frites_1.jpg")
+                .setColor("RANDOM")
+              message.channel.sendEmbed(embedfr22);
+             }
             }
 
-            if(message.content === "Boisson"){//BOISSONS
-                return message.reply("Merci de mentionner une boisson précise ! Liste des sauces avec la commande *~Boissons*")
-            }else{
-                 if(message.content === "~Boissons"){
+             if(message.content === "~Boissons"){
                     var embedb = new Discord.RichEmbed()
                     .setDescription("**Voici la liste des boissons pour vous hydrater !**")
                     .addField("Tropico : ", "*BTropico* ")
@@ -310,6 +324,6 @@ bot.on('message', message => {
                   message.channel.sendEmbed(embedfr2);
                  }
                 
-                }
+                
 
      });
