@@ -17,11 +17,11 @@ bot.on('message', message => {
     
         
         if (message.content === "~test"){
-            message.channel.sendMessage("```css \n Test 1..```  ```Test1 OK```  ```Bot OK```")
+            message.channel.sendMessage("```css \n Test 1...```  ```Test1 OK```  ```Bot OK```")
               }
           
     
-    if (message.content.split(" ")[0] == "~embed"){//EMBED
+    if (message.content.split(" ")[0] == "~embed "){//EMBED
              message.delete()
              var embed = new Discord.RichEmbed()
             .setColor("#FF7F50")
@@ -63,17 +63,24 @@ bot.on('message', message => {
         if(message.content === "~help") { 
           var embed = new Discord.RichEmbed()
           .setTitle("Liste des commandes :")
-          .addField("**~test : **", "Tester le bot.")
-         .addField("**~emebed : **", "Créer des Embed.")
-         .addField("**Hugs :**", "Faites des câlins !")
+          .addField("**~LaCarte**", "Renseignez vous sur nos produits à consommer !")
+          .addField(" \n **~test : **", "Tester le bot.")
+         .addField("**~embed : **", "Créer des Embed.")
          .addField("**~avatar :**", "Afficher votre propre avatar.")
          .addField("**~infodiscord :**", "Infos à propos du serveur.")
          .addField("**~say :**", "Faites dire ce que vous souhaitez au bot !.")
          .addField("**~sondage :**", "Faites voter vos idées !.")
          .addField("**~listfun :**", "Afficher la liste des commandes.. inutile")
-         .addField(" \n ***Bonne visiste à la Friterie !***", "**:D**")
+         .addField(" \n ***Bonne visite à la Friterie ! Et bon appétit !***", "**:D**")
          .setColor("#8800fc")
       message.channel.sendEmbed(embed)
+        }
+
+        if(message.content === "~LaCarte"){
+            var embedC = new Discord.RichEmbed()
+            .setTitle("La Carte de la Friterie")
+            .addField(" \n Frites ------", "------Avec la commande *Frites*")
+            .addField(" \n Et encore d'autres à venir ! ----", "------Bon appétit !")
         }
 
 
@@ -93,13 +100,6 @@ bot.on('message', message => {
 
         }
 
-        if(message.content === "croix") { 
-          var embed = new Discord.RichEmbed()
-          .setDescription("Une croix. De ce qu'il y a de plus basique..")
-          .setImage("https://cdn.discordapp.com/avatars/387291278670430208/46127661d0b7e952e31885c654936618.png?size=2048")
-         .setColor("#8800fc")
-      message.channel.sendEmbed(embed)
-        }
 
     var randnum = 0
 
@@ -163,7 +163,7 @@ bot.on('message', message => {
       var embed1 = new Discord.RichEmbed()
       .setDescription("***Liste des commandes fun :***")
       .addField("**cat : **", "Fait apparaitre une image de chat.")
-      .addField("**croix : **", "...✟...")
+      .addField("**Hugs :**", "Faites des câlins !")
       .addField("**Et d'autres à venir..**", "Proposez vos idées..")
      .setColor("#8800fc")
   message.channel.sendEmbed(embed1)
