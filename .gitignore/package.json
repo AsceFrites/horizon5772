@@ -1,15 +1,14 @@
 {
-  "name": "horizon-bot",
+  "name": "asce",
   "version": "1.0.0",
-  "description": "",
+  "description": "bot",
   "main": "index.js",
-  "dependencies": {
-    "discord.js": "^11.4.2"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Asce",
-  "license": "ISC"
+  "author": "asce",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
 }
